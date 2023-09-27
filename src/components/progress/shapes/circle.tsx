@@ -19,7 +19,6 @@ const Circle: React.FC<ProgressBarProps> = ({
       {children}
       <svg width="auto" height="auto" viewBox="0 0 115 115">
         <circle
-          id="path4"
           cy="57.531845"
           cx="-57.531845"
           transform="rotate(-90)"
@@ -31,7 +30,6 @@ const Circle: React.FC<ProgressBarProps> = ({
         <circle
           className="progress"
           ref={pathRef as React.RefObject<SVGCircleElement>}
-          id="path4"
           cy="57.531845"
           cx="-57.531845"
           transform="rotate(-90)"

@@ -1,6 +1,6 @@
 {
-  "name": "react-shape-progressbars",
-  "version": "1.0.0",
+  "name": "@demigod916/react-shape-progressbars",
+  "version": "1.0.3",
   "description": "",
   "scripts": {
     "rollup": "rollup -c"
@@ -23,5 +23,8 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/demigod916"
+  }
 }
