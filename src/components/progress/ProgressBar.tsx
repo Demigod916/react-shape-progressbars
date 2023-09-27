@@ -52,15 +52,25 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   }
 
   return (
-    <ShapeComponent
-      value={value}
-      strokeWidth={strokeWidth}
-      trackColor={trackColor}
-      progressColor={progressColor}
-      transitionSpeed={transitionSpeed}
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
-      {children}
-    </ShapeComponent>
+      <ShapeComponent
+        value={value}
+        strokeWidth={strokeWidth}
+        trackColor={trackColor}
+        progressColor={progressColor}
+        transitionSpeed={transitionSpeed}
+      >
+        {children}
+      </ShapeComponent>
+    </div>
   );
 };
 

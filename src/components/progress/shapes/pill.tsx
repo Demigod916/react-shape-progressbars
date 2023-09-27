@@ -23,7 +23,9 @@ const Pill: React.FC<ProgressBarProps> = ({
 
   return (
     <>
-      {children}
+      <div style={{ position: "absolute", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        {children}
+      </div>
       <svg width="auto" height="auto" viewBox="0 0 60 115">
         <rect
           width="47.835606"

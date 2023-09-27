@@ -23,7 +23,9 @@ const Square: React.FC<ProgressBarProps> = ({
 
   return (
     <>
-      {children}
+      <div style={{ position: "absolute", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        {children}
+      </div>
       <svg width="auto" height="auto" viewBox="0 0 115 115">
         <path
           d="M 56.945618,8.5103502 H 107.49016 V 107.50024 H 8.5002594 V 8.5103502 H 56.945618"

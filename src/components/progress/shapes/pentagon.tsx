@@ -23,7 +23,9 @@ const Pentagon: React.FC<ProgressBarProps> = ({
 
   return (
     <>
-      {children}
+      <div style={{ position: "absolute", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", top: "2.5%" }}>
+        {children}
+      </div>
       <svg width="auto" height="auto" viewBox="0 0 115 115">
         <path
           d="M 32.417544,-13.319469 67.382988,12.084938 54.026878,53.189445 10.806903,53.18902 -2.5483993,12.084251 Z"

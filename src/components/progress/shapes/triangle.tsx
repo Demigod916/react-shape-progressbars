@@ -23,7 +23,9 @@ const Triangle: React.FC<ProgressBarProps> = ({
 
   return (
     <>
-      {children}
+      <div style={{ position: "absolute", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", top: "6.5%" }}>
+        {children}
+      </div>
       <svg width="auto" height="auto" viewBox="0 0 115 115">
         <path
           d="m 32.536801,-22.249432 37.708394,65.312843 -75.416778,5e-6 z"

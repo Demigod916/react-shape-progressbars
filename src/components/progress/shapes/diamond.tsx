@@ -23,7 +23,9 @@ const Diamond: React.FC<ProgressBarProps> = ({
 
   return (
     <>
-      {children}
+      <div style={{ position: "absolute", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        {children}
+      </div>
       <svg width="auto" height="auto" viewBox="0 0 115 115">
         <rect
           width="72.404846"
