@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ProgressBarProps } from "../ProgressBar";
-import { usePathLength } from "../hooks/pathlength";
 
 const Circle: React.FC<ProgressBarProps> = ({
   value,
@@ -10,9 +9,17 @@ const Circle: React.FC<ProgressBarProps> = ({
   transitionSpeed,
   children,
 }) => {
-  const { pathRef, pathLength } = usePathLength();
+  const progressRef = useRef<SVGCircleElement | null>(null);
+  const [pathLength, setPathLength] = useState<number>(0);
   const filledLength = (value / 100) * pathLength;
   const strokeDashoffsetValue = pathLength - filledLength;
+
+  useEffect(() => {
+    if (progressRef.current) {
+      const length = progressRef.current.getTotalLength();
+      setPathLength(length);
+    }
+  }, []);
 
   return (
     <>
@@ -29,7 +36,7 @@ const Circle: React.FC<ProgressBarProps> = ({
         />
         <circle
           className="progress"
-          ref={pathRef as React.RefObject<SVGCircleElement>}
+          ref={progressRef}
           cy="57.531845"
           cx="-57.531845"
           transform="rotate(-90)"

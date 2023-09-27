@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ProgressBarProps } from "../ProgressBar";
-import { usePathLength } from "../hooks/pathlength";
 
 const Diamond: React.FC<ProgressBarProps> = ({
   value,
@@ -10,9 +9,17 @@ const Diamond: React.FC<ProgressBarProps> = ({
   transitionSpeed,
   children,
 }) => {
-  const { pathRef, pathLength } = usePathLength();
+  const progressRef = useRef<SVGRectElement | null>(null);
+  const [pathLength, setPathLength] = useState<number>(0);
   const filledLength = (value / 100) * pathLength;
   const strokeDashoffsetValue = pathLength - filledLength;
+
+  useEffect(() => {
+    if (progressRef.current) {
+      const length = progressRef.current.getTotalLength();
+      setPathLength(length);
+    }
+  }, []);
 
   return (
     <>
@@ -32,7 +39,7 @@ const Diamond: React.FC<ProgressBarProps> = ({
         />
         <rect
           className="progress"
-          ref={pathRef as React.RefObject<SVGRectElement>}
+          ref={progressRef}
           width="72.404846"
           height="72.41053"
           x="45.006577"
