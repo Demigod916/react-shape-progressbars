@@ -84,7 +84,7 @@ If you'd like to use a custom shape not provided by the library, set the `shape`
 } />
 ```
 
-##Example
+### Example
 
 ```jsx
 
