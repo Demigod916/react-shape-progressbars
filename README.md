@@ -2,6 +2,8 @@
 
 `react-shape-progressbars` is a flexible and extensible React component library that allows you to visualize progress using various shape-based progress bars.
 
+![image](https://github.com/Demigod916/react-shape-progressbars/assets/60995067/7dea1cea-d33f-4f90-889b-760f937cbff0)
+
 ## Table of Contents
 
 - [Installation](#installation)
