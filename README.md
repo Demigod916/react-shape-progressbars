@@ -34,7 +34,7 @@ To use a shape-based progress bar in your React application:
 
 ```jsx
 import React from "react";
-import ProgressBar from "@demigod916/react-shape-progressbars";
+import { ProgressBar } from "@demigod916/react-shape-progressbars";
 
 const App = () => {
   return (
